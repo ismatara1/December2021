@@ -1,10 +1,7 @@
 package variousConcepts;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,17 +10,17 @@ public class LoginTest_JUnit {
 
 	WebDriver driver;
 	
-	@BeforeClass
+	
 	public static void beforeClass() {
 	System.out.println("before class");	
 	}
-	@AfterClass
+	
 	public static void aferClass() {
 	System.out.println("after class");	
 	}
 
 
-	@Before
+	
 	public void launchBrowser() {
 		System.out.println("before method");
 
@@ -38,7 +35,7 @@ public class LoginTest_JUnit {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+
 	public void loginTest() {
 		System.out.println("test method");
 
@@ -48,7 +45,7 @@ public class LoginTest_JUnit {
 		driver.findElement(By.name("login")).click();
 	}
 
-	@Test
+	
 	public void negLoginTestPassword() {
 System.out.println("negTestMethod");
 		driver.findElement(By.id("username")).sendKeys("demo@techfios.com");
@@ -63,7 +60,7 @@ System.out.println("negTestMethod");
 	 * driver.findElement(By.id("password")).sendKeys("abc123");
 	 * driver.findElement(By.name("login")).click(); }
 	 */
-	@After
+	
 	public void tearDown() {
 		System.out.println("tearDown");
 		driver.close();

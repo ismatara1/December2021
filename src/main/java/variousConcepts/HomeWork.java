@@ -1,7 +1,6 @@
 package variousConcepts;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -12,8 +11,7 @@ public class HomeWork {
 	WebDriver driver;
 	@Before
 	public void launchBrowser() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\arais\\eclipse-SeleniumDecember20-21\\Class2\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jhuma\\Desktop\\SeleniumLearn2\\codeBase\\December2021\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -35,7 +33,7 @@ public class HomeWork {
 		driver.findElement(By.id("contact_phone")).sendKeys("6026585536");
 	//	driver.findElement(By.xpath("//button[contains(text(),'Submit')]")).click();		
 		}
-//	@After
+//	
 //	public void tearDown() {
 //		driver.close();
 //	}
